@@ -3,6 +3,6 @@ const fs = require('fs');
 const path = require('path');
 const system = fs.readFileSync(path.join(__dirname, 'caveman-SKILL.md'), 'utf8');
 module.exports = ({ vars }) => [
-  { role: 'system', content: system },
+  { role: 'system', content: [{ type: 'text', text: system, cache_control: { type: 'ephemeral' } }] },
   { role: 'user', content: vars.task },
 ];

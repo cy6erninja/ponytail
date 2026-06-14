@@ -23,6 +23,8 @@ prompts:
     label: caveman
   - id: file://arms/ponytail.js
     label: ponytail
+  - id: file://arms/oneline.js
+    label: oneline
 
 defaultTest:
   assert:
